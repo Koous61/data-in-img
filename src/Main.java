@@ -1,7 +1,7 @@
-import java.util.Scanner;
+import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.*;
-import javax.imageio.ImageIO;
+import java.util.Scanner;
 
 public class Main {
 
