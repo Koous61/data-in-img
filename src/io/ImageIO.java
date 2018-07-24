@@ -1,5 +1,6 @@
 package io;
 
+
 public interface ImageIO <I> {
 
 	I load(String path);
