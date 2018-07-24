@@ -1,15 +1,13 @@
 package io;
 
+import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 
 public class ImageIOImpl<I> implements ImageIO<I> {
     @Override
     public I load(String path) {
         try {
-            InputStream in = getClass().getResourceAsStream(path);
-
-            return (I) javax.imageio.ImageIO.read(in);
+            return (I) javax.imageio.ImageIO.read(new File(path));
         } catch (IOException e) {
             e.printStackTrace();
         }
