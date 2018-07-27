@@ -2,9 +2,7 @@ package binary;
 
 import util.ImageBlueprint;
 
-import java.awt.*;
-import java.awt.image.*;
-import java.io.IOException;
+import java.awt.image.BufferedImage;
 
 public class ImageBinarization {
 	
