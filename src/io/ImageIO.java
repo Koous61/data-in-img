@@ -1,9 +1,11 @@
 package io;
 
+import java.io.IOException;
+
 public interface ImageIO <I> {
 
-	I load(String path);
+	I load(String path) throws IOException;
 	
-	Boolean save(String path);
+	Boolean save(I data, String path) throws IOException;
 
 }

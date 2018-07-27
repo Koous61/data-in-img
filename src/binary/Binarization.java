@@ -1,9 +1,12 @@
 package binary;
 
-public interface Binarization<D> {
+import java.io.IOException;
 
-	byte[] asBinary(D data);
+//создания байт-кода даты
+public interface Binarization<D> {
+	
+	byte[] asBinary(D data) throws IOException;
 	
 	D asImage(byte[] bytes);
-
+	
 }
