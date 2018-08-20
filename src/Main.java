@@ -1,7 +1,8 @@
 import binary.Binarization;
 import encrypt.Encryptor;
-import io.ImageIO;
 import util.ImageBlueprint;
+import util.io.ImageIO;
+import util.io.TextIO;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -12,7 +13,7 @@ public class Main {
 		
 		ImageBlueprint blueprint = Binarization.asImageBlueprint(image);
 
-		String inputUser = "gerghehderyrtfhfgthfghdghsdgrrsgfsrsdfgbfreryhtrhjutregfwefuigwefuwerghkierui";
+		String inputUser = TextIO.read("txt/in/txt.txt");
 
 		blueprint = Encryptor.encrypt(blueprint, inputUser);
 
@@ -20,7 +21,7 @@ public class Main {
 
 		String a = Encryptor.decrypt(blueprint);
 
-		System.out.println(a);
+		TextIO.save(a, "txt/out/txt.txt");
 
 		ImageIO.save(image2, "img/out/1.jpg");
 	}
