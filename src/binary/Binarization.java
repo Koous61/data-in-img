@@ -4,7 +4,7 @@ import util.ImageBlueprint;
 
 import java.awt.image.BufferedImage;
 
-public class ImageBinarization {
+public class Binarization {
 	
 	public static ImageBlueprint asImageBlueprint(BufferedImage image) {
 		return new ImageBlueprint(image.getWidth(), image.getHeight(), ImageBlueprint.toPixelArray(image));
@@ -22,5 +22,25 @@ public class ImageBinarization {
 		
 		return bufferedImage;
 	}
-	
+
+	public static int[] toBytes(String data) {
+		int[] result = new int[data.length()]; //Used to store our ints
+
+		for (int i = 0; i < data.length(); i++) {
+			result[i] = data.charAt(i);
+		}
+		return result;
+	}
+
+	public static String fromBytes(int[] data) {
+		StringBuilder result = new StringBuilder();
+
+		for (int ch : data) {
+			result.append((char) ch);
+		}
+
+		return result.toString();
+	}
+
+
 }

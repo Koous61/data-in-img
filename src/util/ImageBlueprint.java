@@ -42,4 +42,8 @@ public class ImageBlueprint {
 	public void setPixel(int i, int j, int value) {
 		pixels[i][j] = value;
 	}
+
+	public int getPixel(int i, int j) {
+		return pixels[i][j];
+	}
 }
